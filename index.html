@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>
+			poggi.ng
+		</title>
+		<style>
+			body {
+				background: linear-gradient(135deg, RGB(160,220,255), RGB(255,150,255));
+				cursor: X;
+			}
+			main {
+				background-color: RGBA(255,255,255,0.5);
+				filter: blur(0px);
+				border-radius: 20%;
+				height: 75vh;
+				width: 75vh;
+				position: absolute;
+				top: 12.5vh;
+				left: calc(50vw - 37.5vh);
+			}
+			img {
+				height: 90%;
+				width: auto;
+				position: absolute;
+				top: 2.5vh;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<img src="resources/Pogchamp.png" alt="Pogchamp" />
+		</main>
+	</body>
+	<script>
+		const SPECIAL_IMAGES = ["Poggers", "KomodoHype"];
+		if (Math.random() < 0.1) {
+			const IMG = document.getElementsByTagName("img")[0];
+			const SPECIAL_IMAGE = SPECIAL_IMAGES[Math.floor(Math.random() * SPECIAL_IMAGES.length)];
+			IMG.src = "resources/" + SPECIAL_IMAGE + ".png";
+			IMG.alt = SPECIAL_IMAGE;
+		}
+	</script>
+</html>
